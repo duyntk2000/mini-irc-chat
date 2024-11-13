@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+    "mini-irc-protocol",
+    "mini-irc-mt-client",
+    "mini-irc-ui",
+    "server",
+]

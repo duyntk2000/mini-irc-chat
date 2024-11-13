@@ -1,0 +1,22 @@
+[package]
+name = "mini-irc-mt-client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "mini_irc"
+path = "src/main.rs"
+
+[lib]
+name = "mini_irc_mt"
+path = "src/lib.rs"
+
+[dependencies]
+mini-irc-protocol = { version = "0.1.0", path = "../mini-irc-protocol" }
+mini-irc-ui = { version = "0.1.0", path = "../mini-irc-ui" }
+crossterm = { version = "0.22" }
+tui = { version = "0.16", default-features = false, features = ['crossterm'] }
+crypto_box = "0.6"
+serde-encrypt = "0.7.0"
+serde-encrypt-core = "0.7.0"

@@ -1,0 +1,23 @@
+[package]
+name = "mini-irc-ui"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "ui"
+path = "src/main.rs"
+
+[[bin]]
+name = "input_fuzzer"
+path = "src/input_fuzzer.rs"
+
+[lib]
+name = "mini_irc_ui"
+path = "src/lib.rs"
+
+[dependencies]
+crossterm = { version = "0.22" }
+tui = { version = "0.16", default-features = false, features = ['crossterm'] }
+unicode-width = "*"
+rand = "0.8"
